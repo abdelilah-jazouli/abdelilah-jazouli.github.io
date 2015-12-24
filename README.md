@@ -1,2 +1,3 @@
 # test-me
-Test repository creation on GitHub
+Test repository creation on GitHub.
+GitHub is an awesome tools
