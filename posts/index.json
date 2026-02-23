@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "rag-production-bonnes-pratiques",
+    "title": "RAG en production : les pièges à éviter et les bonnes pratiques",
+    "description": "",
+    "date": "2025-02-10",
+    "tags": [
+      "GenAI",
+      "RAG",
+      "LLM",
+      "REX"
+    ],
+    "readTime": "8 min",
+    "author": "Azeka Consulting"
+  },
+  {
+    "slug": "architecture-multi-agent-comparatif",
+    "title": "Architecture Multi-Agent : LangGraph vs CrewAI vs Autogen",
+    "description": "",
+    "date": "2025-01-28",
+    "tags": [
+      "Architecture",
+      "Multi-Agent",
+      "LLM",
+      "GenAI"
+    ],
+    "readTime": "12 min",
+    "author": "Azeka Consulting"
+  },
+  {
+    "slug": "moderniser-data-stack-2025",
+    "title": "Moderniser son Data Stack en 2025 : du Lakehouse au Real-Time",
+    "description": "",
+    "date": "2025-01-15",
+    "tags": [
+      "Data Engineering",
+      "Cloud",
+      "Lakehouse",
+      "Architecture"
+    ],
+    "readTime": "10 min",
+    "author": "Azeka Consulting"
+  }
+]

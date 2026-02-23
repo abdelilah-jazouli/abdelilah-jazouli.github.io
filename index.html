@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Azeka Consulting — Ingénierie IA Europe–Afrique. Architecture stratégique d'intelligence artificielle pour un espace numérique européen et africain. Data Engineering, GenAI, LLM, RAG, Multi-Agent.">
+  <meta name="keywords"
+    content="Ingénierie IA, Europe Afrique, Data Engineering, Intelligence Artificielle, Consultant, GenAI, LLM, RAG, Multi-Agent, Cloud, Azeka Consulting">
+  <meta name="author" content="Azeka Consulting">
+  <meta property="og:title" content="Azeka Consulting — Ingénierie IA Europe–Afrique">
+  <meta property="og:description"
+    content="Architecture stratégique d'intelligence artificielle pour un espace numérique Europe–Afrique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://azeka-consulting.com">
+  <title>Azeka Consulting — Ingénierie IA Europe–Afrique</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon : hexagone + arbre numérique (palette officielle) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='hg' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%2339B77A'/%3E%3Cstop offset='100%25' stop-color='%23174A9C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='50,4 93,27 93,73 50,96 7,73 7,27' fill='%230F1B2E' stroke='url(%23hg)' stroke-width='3'/%3E%3C!-- Tronc --%3E%3Crect x='47' y='55' width='6' height='20' rx='2' fill='url(%23hg)' opacity='0.9'/%3E%3C!-- Racines --%3E%3Cline x1='50' y1='75' x2='38' y2='88' stroke='%2339B77A' stroke-width='2.5' stroke-linecap='round' opacity='0.8'/%3E%3Cline x1='50' y1='75' x2='62' y2='88' stroke='%2339B77A' stroke-width='2.5' stroke-linecap='round' opacity='0.8'/%3E%3Cline x1='50' y1='80' x2='50' y2='90' stroke='%2339B77A' stroke-width='2' stroke-linecap='round' opacity='0.7'/%3E%3C!-- Feuillage --%3E%3Ccircle cx='50' cy='38' r='16' fill='%23174A9C' opacity='0.85'/%3E%3Ccircle cx='36' cy='45' r='10' fill='%231a5ab8' opacity='0.75'/%3E%3Ccircle cx='64' cy='45' r='10' fill='%231a5ab8' opacity='0.75'/%3E%3Ccircle cx='50' cy='28' r='11' fill='%232563c9' opacity='0.8'/%3E%3C/svg%3E">
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <!-- Logo hexagone + arbre SVG officiel -->
+        <svg class="nav-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="navGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#39B77A" />
+              <stop offset="100%" stop-color="#174A9C" />
+            </linearGradient>
+          </defs>
+          <polygon points="40,3 74,21 74,59 40,77 6,59 6,21" fill="#0F1B2E" stroke="url(#navGrad)" stroke-width="2.5" />
+          <rect x="37.5" y="44" width="5" height="16" rx="2" fill="url(#navGrad)" opacity="0.9" />
+          <line x1="40" y1="60" x2="29" y2="70" stroke="#39B77A" stroke-width="2" stroke-linecap="round"
+            opacity="0.85" />
+          <line x1="40" y1="60" x2="51" y2="70" stroke="#39B77A" stroke-width="2" stroke-linecap="round"
+            opacity="0.85" />
+          <line x1="40" y1="64" x2="40" y2="72" stroke="#39B77A" stroke-width="1.8" stroke-linecap="round"
+            opacity="0.7" />
+          <circle cx="40" cy="30" r="13" fill="#174A9C" opacity="0.88" />
+          <circle cx="28" cy="37" r="8" fill="#1a5ab8" opacity="0.78" />
+          <circle cx="52" cy="37" r="8" fill="#1a5ab8" opacity="0.78" />
+          <circle cx="40" cy="20" r="9" fill="#2563c9" opacity="0.82" />
+          <circle cx="28" cy="37" r="2" fill="#39B77A" opacity="0.9" />
+          <circle cx="52" cy="37" r="2" fill="#39B77A" opacity="0.9" />
+          <circle cx="40" cy="20" r="2" fill="#39B77A" opacity="0.9" />
+        </svg>
+        <span class="nav-logo-text">
+          <span class="nav-logo-azeka">AZEKA</span>
+          <span class="nav-logo-consulting">CONSULTING</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#references">Références</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-primary nav-cta">Contactez-nous</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-gradient-orb green"></div>
+    <div class="hero-gradient-orb blue"></div>
+
+    <div class="container">
+      <!-- Colonne gauche : texte -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Ingénierie IA Europe–Afrique
+        </div>
+        <h1>
+          <span class="gradient-text">Architecture IA</span><br>
+          Stratégique &amp; Souveraine
+        </h1>
+        <p class="hero-description">
+          Azeka Consulting conçoit des infrastructures d'intelligence artificielle critiques
+          et structure le pont technologique entre l'Europe et l'Afrique.
+          De l'architecture data au déploiement multi-agent, chaque solution est ancrée dans la réalité métier.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            Contactez-nous
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#services" class="btn btn-secondary">
+            Découvrir nos services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-target="15">0</div>
+            <div class="hero-stat-label">Années d'expérience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-target="50">0</div>
+            <div class="hero-stat-label">Projets livrés</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number" data-target="20">0</div>
+            <div class="hero-stat-label">Clients accompagnés</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : bannière visuelle officielle de la charte -->
+      <div class="hero-visual fade-in-right">
+        <div class="hero-banner-container">
+          <!-- Bannière officielle Azeka Consulting — Ingénierie IA Europe–Afrique -->
+          <img src="images/banner-hero.png" alt="Azeka Consulting — Ingénierie IA Europe–Afrique"
+            class="hero-banner-img">
+          <!-- Badges flottants -->
+          <div class="hero-float-badge badge-tl">
+            <span>🌍</span>
+            <span>Europe — Afrique</span>
+          </div>
+          <div class="hero-float-badge badge-br">
+            <span>⚙️</span>
+            <span>IA Stratégique</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nos services</span>
+        <h2 class="section-title">Deux pôles d'expertise,<br><span class="gradient-text">une vision unifiée</span></h2>
+        <p class="section-subtitle">
+          Nous combinons l'ingénierie data et l'intelligence artificielle pour créer des solutions
+          complètes, de la donnée brute à l'intelligence actionnable.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Data Engineering Card -->
+        <div class="glass-card service-card data-card fade-in stagger-1">
+          <div class="card-icon">⚡</div>
+          <h3>Data Engineering <span class="gradient-text">&</span> Cloud</h3>
+          <p>
+            Conception et mise en œuvre d'architectures data modernes, scalables et résilientes.
+            Nous transformons vos données en actifs stratégiques.
+          </p>
+          <ul class="service-features">
+            <li>Architecture Data Cloud (GCP, AWS, Azure)</li>
+            <li>Pipelines ETL/ELT &amp; Orchestration (Airflow, Prefect)</li>
+            <li>Data Lakes &amp; Lakehouses</li>
+            <li>DataOps &amp; Infrastructure as Code</li>
+            <li>Gouvernance &amp; Qualité des données</li>
+          </ul>
+        </div>
+
+        <!-- IA Card -->
+        <div class="glass-card service-card ia-card fade-in stagger-2">
+          <div class="card-icon">🧠</div>
+          <h3>Intelligence Artificielle <span class="gradient-text">&</span> GenAI</h3>
+          <p>
+            Exploitation de l'IA générative et des architectures avancées pour automatiser,
+            augmenter et transformer vos processus métier.
+          </p>
+          <ul class="service-features">
+            <li>IA Générative &amp; LLM (GPT, Claude, Gemini)</li>
+            <li>RAG — Retrieval Augmented Generation</li>
+            <li>Architecture Multi-Agent &amp; Orchestration</li>
+            <li>Human-in-the-Loop (HITL) &amp; AG-UI</li>
+            <li>MLOps &amp; déploiement de modèles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sub-services -->
+      <div class="services-sub-grid">
+        <div class="glass-card service-sub-card fade-in stagger-1">
+          <div class="card-icon">🔄</div>
+          <h4>Orchestration</h4>
+          <p>Workflows intelligents avec LangGraph, Temporal et Apache Airflow pour des pipelines fiables et
+            observables.</p>
+        </div>
+        <div class="glass-card service-sub-card fade-in stagger-2">
+          <div class="card-icon">☁️</div>
+          <h4>Cloud Native</h4>
+          <p>Architectures cloud-native sur GCP, AWS et Azure. Kubernetes, Terraform, CI/CD automatisés.</p>
+        </div>
+        <div class="glass-card service-sub-card fade-in stagger-3">
+          <div class="card-icon">🛡️</div>
+          <h4>Conseil Stratégique</h4>
+          <p>Cadrage de projets data &amp; IA, choix technologiques, feuilles de route et accompagnement au changement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERTISE / ABOUT SECTION ========== -->
+  <section class="expertise" id="expertise">
+    <div class="container">
+      <div class="expertise-grid">
+        <div class="expertise-visual fade-in-left">
+          <div class="expertise-avatar">
+            <div class="expertise-avatar-inner">
+              <div class="expertise-avatar-icon">👨‍💻</div>
+              <div class="expertise-avatar-text">Consultant en IA &amp; Data</div>
+            </div>
+          </div>
+          <div class="expertise-float-badge badge-top">
+            <span>🎯</span>
+            <span>Expert Certifié Cloud</span>
+          </div>
+          <div class="expertise-float-badge badge-bottom">
+            <span>🚀</span>
+            <span>+50 Projets Livrés</span>
+          </div>
+        </div>
+
+        <div class="expertise-content fade-in-right">
+          <span class="section-label">À propos</span>
+          <h2 class="section-title">Un expert terrain,<br><span class="gradient-text">pas un théoricien.</span></h2>
+          <p class="expertise-bio">
+            Fort de plus de 15 ans d'expérience au sein de grands groupes comme Enedis, Thales, Orange et Bouygues
+            Telecom,
+            j'ai fondé <strong>Azeka Consulting</strong> avec une conviction : l'IA et la data ne créent de la valeur
+            que lorsqu'elles sont ancrées dans la réalité métier.
+          </p>
+          <p class="expertise-bio">
+            Mon approche combine rigueur technique et pragmatisme. Je ne vends pas de la technologie,
+            je résous des problèmes concrets — en m'assurant que chaque solution est maintenable,
+            scalable et alignée avec vos objectifs business.
+          </p>
+
+          <div class="expertise-values">
+            <div class="value-item">
+              <div class="value-icon">🎯</div>
+              <div class="value-content">
+                <h4>Expertise Technique</h4>
+                <p>Maîtrise full-stack de la chaîne data : du pipeline à l'interface utilisateur, en passant par les
+                  modèles d'IA.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">⚙️</div>
+              <div class="value-content">
+                <h4>Pragmatisme</h4>
+                <p>Des solutions qui fonctionnent en production, pas des POC qui restent dans les tiroirs.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🌍</div>
+              <div class="value-content">
+                <h4>Vision Europe–Afrique</h4>
+                <p>Un pont technologique structurant entre les deux continents. L'IA souveraine au service des
+                  territoires.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECHNOLOGIES SECTION ========== -->
+  <section class="technologies" id="technologies">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Stack Technique</span>
+        <h2 class="section-title">Les technologies que<br><span class="gradient-text">nous maîtrisons</span></h2>
+        <p class="section-subtitle">
+          Un écosystème technologique complet, des fondations cloud jusqu'aux frameworks d'IA les plus avancés.
+        </p>
+      </div>
+
+      <div class="tech-grid fade-in">
+        <div class="tech-item">
+          <span class="tech-icon">🐍</span>
+          <span class="tech-name">Python</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">📘</span>
+          <span class="tech-name">TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">☁️</span>
+          <span class="tech-name">Google Cloud</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔶</span>
+          <span class="tech-name">AWS</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔷</span>
+          <span class="tech-name">Azure</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🐳</span>
+          <span class="tech-name">Docker</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">☸️</span>
+          <span class="tech-name">Kubernetes</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🏗️</span>
+          <span class="tech-name">Terraform</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔗</span>
+          <span class="tech-name">LangChain</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🕸️</span>
+          <span class="tech-name">LangGraph</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🤖</span>
+          <span class="tech-name">OpenAI / GPT</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🧬</span>
+          <span class="tech-name">Claude / Anthropic</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">💎</span>
+          <span class="tech-name">Gemini</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🗄️</span>
+          <span class="tech-name">PostgreSQL</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔍</span>
+          <span class="tech-name">Qdrant / Vector DB</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🌊</span>
+          <span class="tech-name">Apache Airflow</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">⏱️</span>
+          <span class="tech-name">Temporal</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">⚛️</span>
+          <span class="tech-name">React / Next.js</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">📊</span>
+          <span class="tech-name">dbt</span>
+        </div>
+        <div class="tech-item">
+          <span class="tech-icon">🔥</span>
+          <span class="tech-name">FastAPI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== REFERENCES / CLIENTS SECTION ========== -->
+  <section class="references" id="references">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Références</span>
+        <h2 class="section-title">Ils nous font<br><span class="gradient-text">confiance</span></h2>
+        <p class="section-subtitle">
+          Des missions stratégiques au sein de grands groupes français leaders dans leurs secteurs.
+        </p>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <div class="logos-track" id="logosTrack">
+        <!-- First set -->
+        <div class="logo-item"><span class="logo-text">ENEDIS</span></div>
+        <div class="logo-item"><span class="logo-text">THALES</span></div>
+        <div class="logo-item"><span class="logo-text">ORANGE</span></div>
+        <div class="logo-item"><span class="logo-text">BOUYGUES TELECOM</span></div>
+        <div class="logo-item"><span class="logo-text">SAGEMCOM</span></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-item"><span class="logo-text">ENEDIS</span></div>
+        <div class="logo-item"><span class="logo-text">THALES</span></div>
+        <div class="logo-item"><span class="logo-text">ORANGE</span></div>
+        <div class="logo-item"><span class="logo-text">BOUYGUES TELECOM</span></div>
+        <div class="logo-item"><span class="logo-text">SAGEMCOM</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG SECTION ========== -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Blog</span>
+        <h2 class="section-title">Réflexions &<br><span class="gradient-text">retours d'expérience</span></h2>
+        <p class="section-subtitle">
+          Articles, analyses et retours d'expérience sur les sujets Data &amp; IA qui comptent.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Article 1 -->
+        <a href="article.html?slug=rag-production-bonnes-pratiques" class="glass-card blog-card fade-in stagger-1"
+          style="text-decoration:none;color:inherit;">
+          <div class="blog-card-image">
+            <span class="blog-icon">🤖</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">GenAI</span>
+              <span>•</span>
+              <span>8 min de lecture</span>
+            </div>
+            <h3>RAG en production : les pièges à éviter et les bonnes pratiques</h3>
+            <p>Retour d'expérience sur le déploiement de systèmes RAG en environnement entreprise. Chunking, embeddings,
+              reranking...</p>
+            <span class="blog-card-link">Lire l'article <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Article 2 -->
+        <a href="article.html?slug=architecture-multi-agent-comparatif" class="glass-card blog-card fade-in stagger-2"
+          style="text-decoration:none;color:inherit;">
+          <div class="blog-card-image">
+            <span class="blog-icon">🕸️</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">Architecture</span>
+              <span>•</span>
+              <span>12 min de lecture</span>
+            </div>
+            <h3>Architecture Multi-Agent : LangGraph vs Autogen vs CrewAI</h3>
+            <p>Comparatif des frameworks d'orchestration multi-agent. Critères de choix, cas d'usage et retours terrain.
+            </p>
+            <span class="blog-card-link">Lire l'article <span>→</span></span>
+          </div>
+        </a>
+
+        <!-- Article 3 -->
+        <a href="article.html?slug=moderniser-data-stack-2025" class="glass-card blog-card fade-in stagger-3"
+          style="text-decoration:none;color:inherit;">
+          <div class="blog-card-image">
+            <span class="blog-icon">☁️</span>
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">Data Engineering</span>
+              <span>•</span>
+              <span>10 min de lecture</span>
+            </div>
+            <h3>Moderniser son Data Stack en 2025 : du Lakehouse au Real-Time</h3>
+            <p>Guide pratique pour migrer vers une architecture data moderne. Technologies, patterns et stratégie de
+              migration.</p>
+            <span class="blog-card-link">Lire l'article <span>→</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Démarrons la<br><span class="gradient-text">conversation</span></h2>
+        <p class="section-subtitle">
+          Un projet, une question, ou simplement envie d'échanger ?
+          Prenez contact, nous répondons sous 24h.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info fade-in-left">
+          <h3>Parlons de votre projet</h3>
+          <p>
+            Que vous soyez au stade de l'idée ou que vous cherchiez à accélérer un projet existant,
+            nous sommes là pour vous accompagner. Chaque collaboration commence par une discussion.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon">📧</div>
+              <div class="contact-method-text">
+                <span class="contact-method-label">Email</span>
+                <span class="contact-method-value">contact@azeka-consulting.com</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">📍</div>
+              <div class="contact-method-text">
+                <span class="contact-method-label">Localisation</span>
+                <span class="contact-method-value">France — Remote &amp; On-site</span>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon">⏰</div>
+              <div class="contact-method-text">
+                <span class="contact-method-label">Disponibilité</span>
+                <span class="contact-method-value">Réponse sous 24h</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" title="GitHub">GH</a>
+            <a href="#blog" class="social-link" title="Blog">📝</a>
+          </div>
+
+          <!-- Calendly CTA -->
+          <div class="calendly-section">
+            <h3>Préférez un appel ?</h3>
+            <p>Réservez directement un créneau de 30 minutes pour un appel découverte gratuit.</p>
+            <a href="https://calendly.com/votre-lien" target="_blank" rel="noopener" class="btn btn-primary">
+              📅 Réserver un créneau
+              <span class="btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card contact-form-card fade-in-right">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                <span class="form-error" id="nameError">Veuillez entrer votre nom</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jean@entreprise.com" required>
+                <span class="form-error" id="emailError">Veuillez entrer un email valide</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Sélectionnez un sujet</option>
+                <option value="data-engineering">Data Engineering &amp; Cloud</option>
+                <option value="ia-genai">IA Générative &amp; LLM</option>
+                <option value="architecture">Architecture Multi-Agent</option>
+                <option value="conseil">Conseil Stratégique</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="form-error" id="subjectError">Veuillez sélectionner un sujet</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Décrivez-nous votre projet ou votre besoin..."
+                required></textarea>
+              <span class="form-error" id="messageError">Veuillez entrer votre message</span>
+            </div>
+
+            <!-- Honeypot for spam -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Envoyer le message
+              <span class="btn-icon">→</span>
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <span class="form-success-icon">✅</span>
+            <h3>Message envoyé !</h3>
+            <p>Merci pour votre message. Nous vous répondrons dans les 24h.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg class="nav-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <defs>
+                <linearGradient id="footerGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#39B77A" />
+                  <stop offset="100%" stop-color="#174A9C" />
+                </linearGradient>
+              </defs>
+              <polygon points="40,3 74,21 74,59 40,77 6,59 6,21" fill="#0F1B2E" stroke="url(#footerGrad)"
+                stroke-width="2.5" />
+              <rect x="37.5" y="44" width="5" height="16" rx="2" fill="url(#footerGrad)" opacity="0.9" />
+              <line x1="40" y1="60" x2="29" y2="70" stroke="#39B77A" stroke-width="2" stroke-linecap="round"
+                opacity="0.85" />
+              <line x1="40" y1="60" x2="51" y2="70" stroke="#39B77A" stroke-width="2" stroke-linecap="round"
+                opacity="0.85" />
+              <line x1="40" y1="64" x2="40" y2="72" stroke="#39B77A" stroke-width="1.8" stroke-linecap="round"
+                opacity="0.7" />
+              <circle cx="40" cy="30" r="13" fill="#174A9C" opacity="0.88" />
+              <circle cx="28" cy="37" r="8" fill="#1a5ab8" opacity="0.78" />
+              <circle cx="52" cy="37" r="8" fill="#1a5ab8" opacity="0.78" />
+              <circle cx="40" cy="20" r="9" fill="#2563c9" opacity="0.82" />
+              <circle cx="28" cy="37" r="2" fill="#39B77A" opacity="0.9" />
+              <circle cx="52" cy="37" r="2" fill="#39B77A" opacity="0.9" />
+              <circle cx="40" cy="20" r="2" fill="#39B77A" opacity="0.9" />
+            </svg>
+            <span class="nav-logo-text">
+              <span class="nav-logo-azeka">AZEKA</span>
+              <span class="nav-logo-consulting">CONSULTING</span>
+            </span>
+          </a>
+          <p>
+            Architecture stratégique d'intelligence artificielle pour un espace numérique Europe–Afrique.
+          </p>
+          <div class="footer-brand-tagline">Ingénierie IA Europe–Afrique</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Data Engineering</a></li>
+            <li><a href="#services">Cloud Architecture</a></li>
+            <li><a href="#services">IA Générative</a></li>
+            <li><a href="#services">Multi-Agent</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#expertise">À propos</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#references">Références</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@azeka-consulting.com">Email</a></li>
+            <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="#contact">Formulaire</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Azeka Consulting. Tous droits réservés.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
