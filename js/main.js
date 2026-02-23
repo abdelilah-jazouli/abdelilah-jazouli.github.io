@@ -51,8 +51,9 @@ function initParticleNetwork() {
             this.speedX = (Math.random() - 0.5) * 0.8;
             this.speedY = (Math.random() - 0.5) * 0.8;
             this.opacity = Math.random() * 0.5 + 0.1;
-            // Alternate between Bleu Europe and Vert Afrique (palette officielle)
-            this.color = Math.random() > 0.5 ? '23, 74, 156' : '57, 183, 122';
+            // Palette officielle V2 : Bleu IA Électrique, Cyan IA, Violet IA
+            const r = Math.random();
+            this.color = r > 0.66 ? '28, 92, 255' : r > 0.33 ? '0, 212, 255' : '140, 61, 255';
         }
 
         update() {

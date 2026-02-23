@@ -1,7 +1,8 @@
 /* =============================================
    AZEKA CONSULTING — Design System
-   Charte graphique officielle Europe–Afrique
-   Palette : Bleu Nuit #0F1B2E | Bleu Europe #174A9C | Vert Afrique #39B77A
+   Charte graphique officielle V2 Europe–Afrique
+   Palette V2 : Bleu Nuit Spatial #0A1E3F | Bleu IA Électrique #1C5CFF
+   Cyan IA #00D4FF | Violet IA #8C3DFF | Vert Afrique #39C27D | Or #F4C542
    ============================================= */
 
 /* --- Google Fonts --- */
@@ -9,30 +10,38 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Backgrounds — Palette officielle Bleu Nuit */
-  --bg-primary: #0F1B2E;
-  --bg-secondary: #0c1522;
-  --bg-tertiary: #152236;
+  /* Backgrounds — Palette officielle V2 Bleu Nuit Spatial */
+  --bg-primary: #0A1E3F;
+  --bg-secondary: #071428;
+  --bg-tertiary: #0F2A4F;
   --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-card-hover: rgba(23, 74, 156, 0.12);
-  --bg-nav: rgba(15, 27, 46, 0.92);
+  --bg-card-hover: rgba(28, 92, 255, 0.10);
+  --bg-nav: rgba(10, 30, 63, 0.92);
 
-  /* Palette officielle */
-  --accent-green: #39B77A;
+  /* Palette officielle V2 */
+  --accent-green: #39C27D;
   /* Vert Afrique — CTA / racines */
-  --accent-green-dim: rgba(57, 183, 122, 0.15);
-  --accent-green-glow: 0 0 30px rgba(57, 183, 122, 0.3);
-  --accent-blue: #174A9C;
-  /* Bleu Europe — feuillage / IA */
-  --accent-blue-dim: rgba(23, 74, 156, 0.18);
-  --accent-blue-light: #2563c9;
-  /* Bleu Europe clair pour texte */
-  --accent-blue-glow: 0 0 30px rgba(23, 74, 156, 0.4);
+  --accent-green-dim: rgba(57, 194, 125, 0.15);
+  --accent-green-glow: 0 0 30px rgba(57, 194, 125, 0.3);
+  --accent-blue: #1C5CFF;
+  /* Bleu IA Électrique — circuits / effets lumineux */
+  --accent-blue-dim: rgba(28, 92, 255, 0.18);
+  --accent-cyan: #00D4FF;
+  /* Cyan IA — accents dynamiques */
+  --accent-cyan-dim: rgba(0, 212, 255, 0.15);
+  --accent-violet: #8C3DFF;
+  /* Violet IA — transition feuillage nord */
+  --accent-violet-dim: rgba(140, 61, 255, 0.15);
+  --accent-gold: #F4C542;
+  /* Jaune Or Lumière — halo énergétique */
+  --accent-blue-light: #00D4FF;
+  --accent-blue-glow: 0 0 30px rgba(28, 92, 255, 0.4);
 
-  /* Dégradé signature officiel : Bleu Europe → Vert Afrique */
-  --accent-gradient: linear-gradient(135deg, #174A9C, #39B77A);
-  --accent-gradient-hover: linear-gradient(135deg, #2563c9, #4fd18a);
-  --accent-gradient-h: linear-gradient(90deg, #174A9C, #39B77A);
+  /* Dégradé signature officiel V2 : Cyan → Violet → Vert */
+  --accent-gradient: linear-gradient(135deg, #1C5CFF, #00D4FF, #8C3DFF);
+  --accent-gradient-hover: linear-gradient(135deg, #00D4FF, #8C3DFF, #39C27D);
+  --accent-gradient-h: linear-gradient(90deg, #00D4FF, #8C3DFF, #39C27D);
+  --accent-gradient-full: linear-gradient(90deg, #00D4FF, #8C3DFF, #39C27D, #F4C542);
 
   /* Text */
   --text-primary: #F2F4F7;
@@ -43,7 +52,7 @@
   /* Glass */
   --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-blue: rgba(23, 74, 156, 0.25);
+  --glass-border-blue: rgba(28, 92, 255, 0.25);
   --glass-blur: 20px;
 
   /* Spacing */
@@ -212,33 +221,40 @@ section {
   letter-spacing: 0.3px;
 }
 
-/* Bouton primaire : Vert Afrique (CTA principal) */
+/* Bouton primaire : Dégradé Cyan → Violet (CTA principal) */
 .btn-primary {
-  background: var(--accent-green);
+  background: linear-gradient(135deg, #00D4FF, #8C3DFF);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(57, 183, 122, 0.3);
+  box-shadow:
+    0 4px 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(140, 61, 255, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .btn-primary:hover {
-  background: #4fd18a;
+  background: linear-gradient(135deg, #00E5FF, #A855F7);
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(57, 183, 122, 0.45);
+  box-shadow:
+    0 8px 32px rgba(0, 212, 255, 0.45),
+    0 0 60px rgba(140, 61, 255, 0.25);
   color: #fff;
 }
 
-/* Bouton secondaire : contour Bleu Europe */
+/* Bouton secondaire : glassmorphism + contour Cyan */
 .btn-secondary {
-  background: transparent;
+  background: rgba(0, 212, 255, 0.06);
   color: var(--text-primary);
-  border: 1.5px solid var(--accent-blue);
-  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(0, 212, 255, 0.35);
+  backdrop-filter: blur(12px);
 }
 
 .btn-secondary:hover {
-  background: var(--accent-blue-dim);
-  border-color: var(--accent-blue-light);
+  background: rgba(0, 212, 255, 0.12);
+  border-color: var(--accent-cyan);
   color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
 }
 
 .btn-icon {
@@ -270,7 +286,7 @@ section {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(57, 183, 122, 0.2), rgba(23, 74, 156, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.2), rgba(140, 61, 255, 0.2), transparent);
 }
 
 .glass-card:hover {
@@ -328,12 +344,12 @@ section {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(57, 183, 122, 0.3));
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3));
   transition: filter var(--transition-base);
 }
 
 .nav-logo:hover .nav-logo-svg {
-  filter: drop-shadow(0 0 12px rgba(57, 183, 122, 0.5));
+  filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.5));
 }
 
 
@@ -526,15 +542,15 @@ section {
   align-items: center;
   gap: 10px;
   padding: 8px 18px;
-  background: rgba(23, 74, 156, 0.12);
-  border: 1px solid rgba(23, 74, 156, 0.3);
+  background: rgba(28, 92, 255, 0.12);
+  border: 1px solid rgba(28, 92, 255, 0.3);
   border-radius: 100px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #7ab4ff;
+  color: var(--accent-cyan);
   margin-bottom: 28px;
   backdrop-filter: blur(10px);
 }
@@ -553,13 +569,13 @@ section {
   100% {
     opacity: 1;
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(57, 183, 122, 0.4);
+    box-shadow: 0 0 0 0 rgba(57, 194, 125, 0.4);
   }
 
   50% {
     opacity: 0.8;
     transform: scale(1.2);
-    box-shadow: 0 0 0 6px rgba(57, 183, 122, 0);
+    box-shadow: 0 0 0 6px rgba(57, 194, 125, 0);
   }
 }
 
@@ -646,28 +662,22 @@ section {
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* overflow:hidden sur le conteneur masque les zones transparentes dépassant des bords */
-  max-width: 540px;
-  height: 220px;
-  overflow: hidden;
+  max-width: 560px;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(57, 183, 122, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   box-shadow:
-    0 0 40px rgba(57, 183, 122, 0.15),
-    0 0 80px rgba(23, 74, 156, 0.1),
+    0 0 40px rgba(0, 212, 255, 0.15),
+    0 0 80px rgba(28, 92, 255, 0.1),
     0 20px 60px rgba(0, 0, 0, 0.4);
   animation: hero-logo-float 8s ease-in-out infinite;
+  overflow: hidden;
 }
 
 .hero-banner-img {
-  /* L'image est plus grande que le conteneur, alignée en bas
-     Les ~55px transparents en haut dépassent et sont masqués par overflow:hidden */
   width: 100%;
-  height: 280px;
-  object-fit: cover;
-  /* right 65% : cadre l'image pour montrer le globe+logo hexagone côté droit */
-  object-position: right 65%;
-  flex-shrink: 0;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
 }
 
 @keyframes hero-logo-float {
@@ -675,12 +685,12 @@ section {
   0%,
   100% {
     transform: translateY(0px);
-    filter: drop-shadow(0 0 40px rgba(57, 183, 122, 0.25)) drop-shadow(0 0 80px rgba(23, 74, 156, 0.2));
+    filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.25)) drop-shadow(0 0 80px rgba(28, 92, 255, 0.2));
   }
 
   50% {
     transform: translateY(-12px);
-    filter: drop-shadow(0 0 60px rgba(57, 183, 122, 0.4)) drop-shadow(0 0 100px rgba(23, 74, 156, 0.3));
+    filter: drop-shadow(0 0 60px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 100px rgba(28, 92, 255, 0.3));
   }
 }
 
@@ -689,7 +699,7 @@ section {
   position: absolute;
   width: 420px;
   height: 420px;
-  border: 1px solid rgba(57, 183, 122, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.1);
   border-radius: 50%;
   animation: halo-pulse 4s ease-in-out infinite;
 }
@@ -698,7 +708,7 @@ section {
   content: '';
   position: absolute;
   inset: 20px;
-  border: 1px solid rgba(23, 74, 156, 0.08);
+  border: 1px solid rgba(28, 92, 255, 0.08);
   border-radius: 50%;
 }
 
@@ -719,7 +729,7 @@ section {
 /* Badges flottants côté visuel */
 .hero-float-badge {
   position: absolute;
-  background: rgba(15, 27, 46, 0.9);
+  background: rgba(10, 30, 63, 0.9);
   border: 1px solid var(--glass-border-blue);
   border-radius: var(--radius-md);
   padding: 10px 16px;
@@ -743,7 +753,7 @@ section {
 .hero-float-badge.badge-br {
   bottom: 40px;
   right: -20px;
-  color: #7ab4ff;
+  color: var(--accent-cyan);
   animation: float-badge 7s ease-in-out infinite reverse;
 }
 
@@ -790,7 +800,7 @@ section {
 
 .service-card.data-card .card-icon {
   background: var(--accent-blue-dim);
-  color: #7ab4ff;
+  color: var(--accent-cyan);
 }
 
 .service-card.ia-card .card-icon {
@@ -828,7 +838,7 @@ section {
 /* Marqueur data-card : bleu europe */
 .data-card .service-features li::before {
   content: '▸';
-  color: #7ab4ff;
+  color: var(--accent-cyan);
   font-weight: bold;
   flex-shrink: 0;
 }
@@ -862,7 +872,7 @@ section {
   font-size: 1.3rem;
   margin: 0 auto 16px;
   background: var(--accent-blue-dim);
-  color: #7ab4ff;
+  color: var(--accent-cyan);
 }
 
 .service-sub-card:nth-child(2) .card-icon {
@@ -949,7 +959,7 @@ section {
 
 .expertise-float-badge {
   position: absolute;
-  background: rgba(15, 27, 46, 0.95);
+  background: rgba(10, 30, 63, 0.95);
   border: 1px solid var(--glass-border-blue);
   border-radius: var(--radius-md);
   padding: 12px 18px;
@@ -973,7 +983,7 @@ section {
   bottom: 20px;
   left: -20px;
   animation-delay: -3s;
-  color: #7ab4ff;
+  color: var(--accent-cyan);
 }
 
 .expertise-content h2 {
@@ -1058,14 +1068,14 @@ section {
 
 .tech-item:hover {
   background: var(--accent-blue-dim);
-  border-color: rgba(23, 74, 156, 0.4);
+  border-color: rgba(28, 92, 255, 0.2);
   transform: translateY(-4px);
   box-shadow: var(--accent-blue-glow);
 }
 
 .tech-item:nth-child(even):hover {
   background: var(--accent-green-dim);
-  border-color: rgba(57, 183, 122, 0.4);
+  border-color: rgba(57, 194, 125, 0.4);
   box-shadow: var(--accent-green-glow);
 }
 
@@ -1117,7 +1127,7 @@ section {
 
 .logo-item:hover {
   background: var(--accent-blue-dim);
-  border-color: rgba(23, 74, 156, 0.35);
+  border-color: rgba(28, 92, 255, 0.35);
 }
 
 .logo-text {
@@ -1207,7 +1217,7 @@ section {
 .blog-card-tag {
   padding: 3px 10px;
   background: var(--accent-blue-dim);
-  color: #7ab4ff;
+  color: var(--accent-cyan);
   font-size: 0.72rem;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
@@ -1342,7 +1352,7 @@ section {
 
 .social-link:hover {
   background: var(--accent-green-dim);
-  border-color: rgba(57, 183, 122, 0.4);
+  border-color: rgba(57, 194, 125, 0.4);
   color: var(--accent-green);
   transform: translateY(-2px);
 }
@@ -1390,7 +1400,7 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(23, 74, 156, 0.15);
+  box-shadow: 0 0 0 3px rgba(28, 92, 255, 0.15);
 }
 
 .form-group textarea {
@@ -1496,7 +1506,7 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--accent-gradient-h);
+  background: var(--accent-gradient-full);
 }
 
 .footer-grid {
