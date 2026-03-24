@@ -1,5 +1,6 @@
 ---
 title: "RAG en production : les pièges à éviter et les bonnes pratiques"
+description: "Retour d'expérience sur le déploiement de systèmes RAG en entreprise : chunking, embeddings, reranking et les erreurs courantes à éviter."
 date: 2025-02-10
 tags: [GenAI, RAG, LLM, REX]
 readTime: 8 min
