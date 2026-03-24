@@ -69,14 +69,14 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | Phase | Intitule | Taches | dont Stitch | Terminees | Progression |
 |-------|----------|--------|-------------|-----------|-------------|
 | 0 | Prerequis Stitch | 4 | 4 | 4 | ██████████ 100% |
-| 1 | Urgences | 11 | 3 | 9 | ████████░░ 82% |
+| 1 | Urgences | 11 | 3 | 11 | ██████████ 100% |
 | 2 | SEO & Metadonnees | 9 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 3 | Securite & Performance | 8 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 4 | Design & Credibilite | 10 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 5 | Accessibilite | 6 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **13** | **██░░░░░░░░ 21%** |
+| **Total** | | **63** | **15** | **15** | **██░░░░░░░░ 24%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
@@ -97,8 +97,8 @@ Le formulaire actuel pointe vers un placeholder Formspree et simule un faux succ
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 1.1 | Creer un Google Form pour le formulaire de contact (champs : nom, email, sujet, message) | Google Workspace | `[!]` |
-| 1.2 | Remplacer le `<form>` Formspree par une integration Google Forms (iframe ou redirect) dans `index.html` | `index.html` | `[!]` |
+| 1.1 | Creer un Google Form pour le formulaire de contact (champs : nom, email, sujet, message) | Google Workspace | `[x]` |
+| 1.2 | Remplacer le `<form>` Formspree par une integration Google Forms (iframe ou redirect) dans `index.html` | `index.html` | `[x]` |
 | 1.3 | Supprimer le code JS de soumission simulee (`setTimeout` + `fetch` commente) dans `initContactForm()` | `js/main.js` | `[x]` |
 | 1.4 | Supprimer le code Calendly residuel commente dans la section contact | `index.html` | `[x]` |
 

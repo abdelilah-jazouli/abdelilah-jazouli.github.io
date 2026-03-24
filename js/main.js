@@ -310,17 +310,16 @@ function initContactForm() {
             submitBtn.textContent = 'Envoi en cours...';
             submitBtn.disabled = true;
 
+            // Google Forms POST en mode no-cors (reponse opaque, mais soumission OK)
             fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
+                body: new URLSearchParams(new FormData(form)),
+                mode: 'no-cors'
             })
-            .then(response => {
-                if (response.ok) {
-                    showSuccess();
-                } else {
-                    throw new Error('Erreur serveur');
-                }
+            .then(() => {
+                // En mode no-cors, la reponse est toujours opaque (type: "opaque")
+                // mais la soumission a bien ete envoyee
+                showSuccess();
             })
             .catch(() => {
                 submitBtn.textContent = originalText;
