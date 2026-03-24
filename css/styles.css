@@ -46,7 +46,7 @@
   --text-primary: #F2F4F7;
   /* Blanc Institutionnel */
   --text-secondary: #a8b8cc;
-  --text-muted: #5a7090;
+  --text-muted: #8A9BB5;
 
   /* Glass */
   --glass-bg: rgba(255, 255, 255, 0.04);
@@ -1859,4 +1859,76 @@ section {
   .logo-text {
     font-size: 0.9rem;
   }
+}
+
+/* =============================================
+   REDUCED MOTION
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fade-in,
+  .fade-in-left,
+  .fade-in-right {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-gradient-orb {
+    animation: none;
+  }
+
+  .logos-track {
+    animation: none;
+  }
+
+  #particle-canvas {
+    display: none;
+  }
+}
+
+/* =============================================
+   FOCUS VISIBLE
+   ============================================= */
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-gradient);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  z-index: 10000;
+  transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+  top: 12px;
+  color: #fff;
 }

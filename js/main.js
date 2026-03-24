@@ -278,7 +278,10 @@ function initContactForm() {
 
         // Reset errors
         form.querySelectorAll('.form-error').forEach(el => el.classList.remove('visible'));
-        form.querySelectorAll('input, textarea, select').forEach(el => el.classList.remove('error'));
+        form.querySelectorAll('input, textarea, select').forEach(el => {
+            el.classList.remove('error');
+            el.removeAttribute('aria-invalid');
+        });
 
         let isValid = true;
 
@@ -339,7 +342,7 @@ function initContactForm() {
     function showError(fieldId, errorId) {
         const field = document.getElementById(fieldId);
         const error = document.getElementById(errorId);
-        if (field) field.classList.add('error');
+        if (field) { field.classList.add('error'); field.setAttribute('aria-invalid', 'true'); }
         if (error) error.classList.add('visible');
     }
 

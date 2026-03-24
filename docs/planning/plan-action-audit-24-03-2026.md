@@ -73,10 +73,10 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | 2 | SEO & Metadonnees | 9 | 0 | 9 | ██████████ 100% |
 | 3 | Securite & Performance | 8 | 0 | 8 | ██████████ 100% |
 | 4 | Design & Credibilite | 10 | 3 | 6 | ██████░░░░ 60% |
-| 5 | Accessibilite | 6 | 0 | 0 | ░░░░░░░░░░ 0% |
+| 5 | Accessibilite | 6 | 0 | 6 | ██████████ 100% |
 | 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **38** | **██████░░░░ 60%** |
+| **Total** | | **63** | **15** | **44** | **███████░░░ 70%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
@@ -239,12 +239,12 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 5.1 | Augmenter le contraste de `--text-muted` (#5a7090 → ~#7A90AD ou plus clair) pour atteindre le ratio 4.5:1 | `css/styles.css` | `[ ]` |
-| 5.2 | Ajouter une media query `prefers-reduced-motion: reduce` pour desactiver toutes les animations (canvas, fade-in, float, counters) | `css/styles.css`, `js/main.js` | `[ ]` |
-| 5.3 | Ajouter des styles `:focus-visible` sur tous les elements interactifs (liens, boutons, inputs) | `css/styles.css` | `[ ]` |
-| 5.4 | Ajouter `aria-hidden="true"` sur le canvas particules et les elements purement decoratifs | `index.html` | `[ ]` |
-| 5.5 | Ajouter un lien "Skip to content" en haut de chaque page | `index.html`, `blog.html`, `article.html`, `css/styles.css` | `[ ]` |
-| 5.6 | Lier les messages d'erreur du formulaire aux champs via `aria-describedby` et ajouter `aria-invalid` sur les champs en erreur | `index.html`, `js/main.js` | `[ ]` |
+| 5.1 | Augmenter le contraste de `--text-muted` (#5a7090 → #8A9BB5, ratio 5.85:1) | `css/styles.css` | `[x]` |
+| 5.2 | Ajouter une media query `prefers-reduced-motion: reduce` pour desactiver toutes les animations (canvas, fade-in, float, counters) | `css/styles.css`, `js/main.js` | `[x]` |
+| 5.3 | Ajouter des styles `:focus-visible` sur tous les elements interactifs (liens, boutons, inputs) | `css/styles.css` | `[x]` |
+| 5.4 | Ajouter `aria-hidden="true"` sur le canvas particules et les elements purement decoratifs | `index.html` | `[x]` |
+| 5.5 | Ajouter un lien "Skip to content" en haut de chaque page | `index.html`, `blog.html`, `article.html`, `css/styles.css` | `[x]` |
+| 5.6 | Lier les messages d'erreur du formulaire aux champs via `aria-describedby` et ajouter `aria-invalid` sur les champs en erreur | `index.html`, `js/main.js` | `[x]` |
 
 ---
 
