@@ -1487,6 +1487,26 @@ section {
   font-size: 0.95rem;
 }
 
+/* Override Google Calendar button to match Azeka design system */
+.calendly-section button.calendar-button {
+  background: linear-gradient(135deg, #00D4FF, #8C3DFF) !important;
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.92rem !important;
+  padding: 14px 32px !important;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(140, 61, 255, 0.15) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.3px !important;
+}
+
+.calendly-section button.calendar-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.45), 0 0 60px rgba(140, 61, 255, 0.25) !important;
+}
+
 /* =============================================
    FOOTER
    ============================================= */
