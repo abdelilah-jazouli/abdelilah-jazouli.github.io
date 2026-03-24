@@ -305,35 +305,27 @@ function initContactForm() {
         }
 
         if (isValid) {
-            // Simulate form submission (replace with actual Formspree submission)
             const submitBtn = form.querySelector('.form-submit');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span class="btn-icon">⏳</span> Envoi en cours...';
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Envoi en cours...';
             submitBtn.disabled = true;
 
-            // If using Formspree, uncomment the following and remove the setTimeout:
-            // fetch(form.action, {
-            //   method: 'POST',
-            //   body: new FormData(form),
-            //   headers: { 'Accept': 'application/json' }
-            // })
-            // .then(response => {
-            //   if (response.ok) {
-            //     showSuccess();
-            //   } else {
-            //     throw new Error('Erreur serveur');
-            //   }
-            // })
-            // .catch(error => {
-            //   submitBtn.innerHTML = originalText;
-            //   submitBtn.disabled = false;
-            //   alert('Une erreur est survenue. Veuillez réessayer.');
-            // });
-
-            // Demo mode: simulate success
-            setTimeout(() => {
+            // Google Forms POST en mode no-cors (reponse opaque, mais soumission OK)
+            fetch(form.action, {
+                method: 'POST',
+                body: new URLSearchParams(new FormData(form)),
+                mode: 'no-cors'
+            })
+            .then(() => {
+                // En mode no-cors, la reponse est toujours opaque (type: "opaque")
+                // mais la soumission a bien ete envoyee
                 showSuccess();
-            }, 1500);
+            })
+            .catch(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                showSubmitError();
+            });
         }
     });
 
@@ -348,6 +340,17 @@ function initContactForm() {
         form.style.display = 'none';
         const successMsg = document.getElementById('formSuccess');
         if (successMsg) successMsg.classList.add('visible');
+    }
+
+    function showSubmitError() {
+        let errEl = form.querySelector('.form-submit-error');
+        if (!errEl) {
+            errEl = document.createElement('p');
+            errEl.className = 'form-submit-error';
+            errEl.style.cssText = 'color:#ef4444;font-size:0.85rem;margin-top:12px;text-align:center;';
+            form.querySelector('.form-submit').insertAdjacentElement('afterend', errEl);
+        }
+        errEl.textContent = 'Une erreur est survenue. Veuillez réessayer.';
     }
 }
 

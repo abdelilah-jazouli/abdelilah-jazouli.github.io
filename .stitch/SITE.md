@@ -35,8 +35,8 @@ azeka-landing-page/
 - [x] `index.html` — Landing page principale
 - [x] `blog.html` — Listing des articles
 - [x] `article.html` — Lecteur d'article
-- [ ] `mentions-legales.html` — **Phase 1 : a generer**
-- [ ] `politique-confidentialite.html` — **Phase 1 : a generer**
+- [x] `mentions-legales.html` — Mentions legales LCEN
+- [x] `politique-confidentialite.html` — Politique de confidentialite RGPD
 - [ ] `404.html` — **Phase 7 backlog**
 
 ## 5. Roadmap des pages a generer
