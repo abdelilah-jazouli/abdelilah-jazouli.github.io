@@ -350,6 +350,9 @@ async function initArticleReader() {
         // Render prev/next nav
         renderArticleNav(postIndex);
 
+        // Init share buttons
+        initShareButtons(post, slug);
+
         // Init TOC scroll tracking
         initTOCTracking();
 
@@ -542,6 +545,30 @@ function showArticleError(message) {
         <p><a href="blog.html">Retour au blog</a></p>
       </div>
     `;
+    }
+}
+
+/* =============================================
+   SHARE BUTTONS
+   ============================================= */
+function initShareButtons(post, slug) {
+    const url = encodeURIComponent('https://www.azeka-consulting.com/article.html?slug=' + slug);
+    const title = encodeURIComponent(post.title);
+
+    const linkedIn = document.getElementById('shareLinkedIn');
+    if (linkedIn) linkedIn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+
+    const twitter = document.getElementById('shareTwitter');
+    if (twitter) twitter.href = 'https://twitter.com/intent/tweet?text=' + title + '&url=' + url;
+
+    const copyBtn = document.getElementById('shareCopy');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(decodeURIComponent(url)).then(() => {
+                copyBtn.classList.add('copied');
+                setTimeout(() => copyBtn.classList.remove('copied'), 2000);
+            });
+        });
     }
 }
 

@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounterAnimation();
     initContactForm();
     initSmoothScroll();
+    initScrollSpy();
+    initBackToTop();
+    initHomeBlog();
 });
 
 /* =============================================
@@ -385,5 +388,122 @@ function initSmoothScroll() {
                 });
             }
         });
+    });
+}
+
+/* =============================================
+   HOME BLOG — Load latest articles from index.json
+   ============================================= */
+function initHomeBlog() {
+    const grid = document.getElementById('homeBlogGrid');
+    if (!grid) return;
+
+    const emojiMap = {
+        'GenAI': '\u{1F916}', 'RAG': '\u{1F50D}', 'LLM': '\u{1F9E0}', 'Architecture': '\u{1F578}',
+        'Data Engineering': '\u{26A1}', 'Cloud': '\u{2601}', 'Multi-Agent': '\u{1F91D}',
+        'MLOps': '\u{2699}', 'REX': '\u{1F4CB}', 'Lakehouse': '\u{1F3E0}'
+    };
+
+    fetch('posts/index.json')
+        .then(r => r.json())
+        .then(posts => {
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            const latest = posts.slice(0, 3);
+
+            grid.textContent = '';
+            latest.forEach((post, i) => {
+                const tag = (post.tags || [])[0] || '';
+                const emoji = emojiMap[tag] || '\u{1F4DD}';
+                const desc = post.description || '';
+
+                const card = document.createElement('a');
+                card.href = 'article.html?slug=' + post.slug;
+                card.className = 'glass-card blog-card fade-in stagger-' + (i + 1);
+                card.style.cssText = 'text-decoration:none;color:inherit;';
+
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'blog-card-image';
+                const iconSpan = document.createElement('span');
+                iconSpan.className = 'blog-icon';
+                iconSpan.textContent = emoji;
+                imgDiv.appendChild(iconSpan);
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'blog-card-content';
+
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'blog-card-meta';
+                const tagSpan = document.createElement('span');
+                tagSpan.className = 'blog-card-tag';
+                tagSpan.textContent = tag;
+                const sep = document.createElement('span');
+                sep.textContent = '\u{2022}';
+                const time = document.createElement('span');
+                time.textContent = (post.readTime || '5 min') + ' de lecture';
+                metaDiv.append(tagSpan, sep, time);
+
+                const h3 = document.createElement('h3');
+                h3.textContent = post.title;
+
+                const p = document.createElement('p');
+                p.textContent = desc;
+
+                const link = document.createElement('span');
+                link.className = 'blog-card-link';
+                link.textContent = 'Lire l\'article ';
+                const arrow = document.createElement('span');
+                arrow.textContent = '\u{2192}';
+                link.appendChild(arrow);
+
+                contentDiv.append(metaDiv, h3, p, link);
+                card.append(imgDiv, contentDiv);
+                grid.appendChild(card);
+            });
+
+            // Re-observe for scroll animations
+            initScrollAnimations();
+        })
+        .catch(() => {});
+}
+
+/* =============================================
+   SCROLL SPY — Active nav link based on section
+   ============================================= */
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navLinks.forEach(link => {
+                    const isActive = link.getAttribute('href') === `#${id}`;
+                    link.classList.toggle('nav-active', isActive);
+                });
+            }
+        });
+    }, {
+        rootMargin: '-80px 0px -60% 0px',
+        threshold: 0
+    });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+/* =============================================
+   BACK TO TOP BUTTON
+   ============================================= */
+function initBackToTop() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('visible', window.pageYOffset > 600);
+    }, { passive: true });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
