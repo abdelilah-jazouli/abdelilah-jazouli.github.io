@@ -74,9 +74,9 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | 3 | Securite & Performance | 8 | 0 | 8 | ██████████ 100% |
 | 4 | Design & Credibilite | 10 | 3 | 6 | ██████░░░░ 60% |
 | 5 | Accessibilite | 6 | 0 | 6 | ██████████ 100% |
-| 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
+| 6 | UX & Navigation | 8 | 3 | 8 | ██████████ 100% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **44** | **███████░░░ 70%** |
+| **Total** | | **63** | **15** | **52** | **████████░░ 83%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
@@ -255,14 +255,14 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Stitch | Statut |
 |---|-------|------------|--------|--------|
-| 6.1 | Ajouter un scroll-spy sur la navigation (marquer la section active dans la navbar) | `js/main.js`, `css/styles.css` | — | `[ ]` |
-| 6.2 | `🎨` Prototyper via Stitch le bouton "back to top" et la barre CTA sticky mobile (variantes de position et style) | `.stitch/designs/` | `ui-design` | `[ ]` |
-| 6.3 | Implementer le bouton "back to top" flottant | `index.html`, `css/styles.css`, `js/main.js` | — | `[ ]` |
-| 6.4 | Dynamiser les cartes blog de la page d'accueil (charger les 3 derniers articles depuis `posts/index.json` au lieu du HTML en dur) | `index.html`, `js/main.js` | — | `[ ]` |
-| 6.5 | `🎨` Prototyper via Stitch le regroupement des technologies par categorie (Cloud, IA/LLM, Data, Orchestration, Frontend) avec sous-titres et separateurs | `.stitch/designs/` | `ui-design` | `[ ]` |
-| 6.6 | Implementer le regroupement des technologies par categorie | `index.html`, `css/styles.css` | — | `[ ]` |
-| 6.7 | `🎨` Prototyper via Stitch les boutons de partage social pour les articles (LinkedIn, Twitter, copier le lien) | `.stitch/designs/` | `ui-design` | `[ ]` |
-| 6.8 | Implementer les boutons de partage social sur les articles | `article.html`, `js/blog.js`, `css/blog.css` | — | `[ ]` |
+| 6.1 | Ajouter un scroll-spy sur la navigation (marquer la section active dans la navbar) | `js/main.js`, `css/styles.css` | — | `[x]` |
+| 6.2 | `🎨` Prototyper via Stitch le bouton "back to top" et la barre CTA sticky mobile (variantes de position et style) | `.stitch/designs/` | `ui-design` | `[x]` |
+| 6.3 | Implementer le bouton "back to top" flottant | `index.html`, `css/styles.css`, `js/main.js` | — | `[x]` |
+| 6.4 | Dynamiser les cartes blog de la page d'accueil (charger les 3 derniers articles depuis `posts/index.json` au lieu du HTML en dur) | `index.html`, `js/main.js` | — | `[x]` |
+| 6.5 | `🎨` Prototyper via Stitch le regroupement des technologies par categorie (Cloud, IA/LLM, Data, Orchestration, Frontend) avec sous-titres et separateurs | `.stitch/designs/` | `ui-design` | `[x]` |
+| 6.6 | Implementer le regroupement des technologies par categorie | `index.html`, `css/styles.css` | — | `[x]` |
+| 6.7 | `🎨` Prototyper via Stitch les boutons de partage social pour les articles (LinkedIn, Twitter, copier le lien) | `.stitch/designs/` | `ui-design` | `[x]` |
+| 6.8 | Implementer les boutons de partage social sur les articles | `article.html`, `js/blog.js`, `css/blog.css` | — | `[x]` |
 
 ---
 
