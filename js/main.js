@@ -20,6 +20,13 @@ function initParticleNetwork() {
     const canvas = document.getElementById('particle-canvas');
     if (!canvas) return;
 
+    // Desactiver sur mobile et si l'utilisateur prefere les animations reduites
+    if (window.matchMedia('(max-width: 768px)').matches ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        canvas.style.display = 'none';
+        return;
+    }
+
     const ctx = canvas.getContext('2d');
     let particles = [];
     let animationId;

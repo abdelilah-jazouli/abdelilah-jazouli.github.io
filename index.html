@@ -23,8 +23,13 @@
   <meta name="twitter:image" content="https://www.azeka-consulting.com/images/og-image.png">
   <link rel="canonical" href="https://www.azeka-consulting.com/">
   <title>Azeka Consulting — Ingénierie IA Europe–Afrique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Google Calendar Appointment Scheduling CSS -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <!-- Favicon officiel V2 : hexagone + arbre numérique -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
@@ -36,7 +41,7 @@
     <div class="container">
       <a href="#hero" class="nav-logo">
         <!-- Logo officiel V2 PNG -->
-        <img src="images/logo_128.png" alt="Azeka Consulting" class="nav-logo-svg">
+        <img src="images/logo_128.png" alt="Azeka Consulting" class="nav-logo-svg" width="58" height="61">
         <span class="nav-logo-text">
           <span class="nav-logo-azeka">AZEKA</span>
           <span class="nav-logo-consulting">CONSULTING</span>
@@ -110,8 +115,11 @@
         <div class="hero-banner-container">
           <!-- Bannière officielle Azeka Consulting — Ingénierie IA Europe–Afrique -->
           <a href="#contact">
-            <img src="images/banner-hero.png" alt="Azeka Consulting — Ingénierie IA Europe–Afrique"
-              class="hero-banner-img">
+            <picture>
+              <source srcset="images/banner-hero.webp" type="image/webp">
+              <img src="images/banner-hero.png" alt="Azeka Consulting — Ingénierie IA Europe–Afrique"
+                class="hero-banner-img" width="940" height="319" fetchpriority="high">
+            </picture>
           </a>
         </div>
       </div>
@@ -499,8 +507,8 @@
           </div>
 
           <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/abdelilahjazouli" target="_blank" rel="noopener" class="social-link" title="LinkedIn">in</a>
-            <a href="https://github.com/abdelilah-jazouli" target="_blank" rel="noopener" class="social-link" title="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/abdelilahjazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">in</a>
+            <a href="https://github.com/abdelilah-jazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">GH</a>
             <a href="blog.html" class="social-link" title="Blog">📝</a>
           </div>
 
@@ -508,7 +516,6 @@
             <h3>Préférez un appel ?</h3>
             <p>Réservez directement un créneau de 30 minutes pour un appel découverte gratuit.</p>
             <!-- Google Calendar Appointment Scheduling begin -->
-            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
             <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
             <script>
             (function() {
@@ -585,8 +592,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="nav-logo">
-            <!-- Logo officiel V2 PNG -->
-            <img src="images/logo_128.png" alt="Azeka Consulting" class="nav-logo-svg">
+            <img src="images/logo_128.png" alt="Azeka Consulting" class="nav-logo-svg" width="58" height="61" loading="lazy">
             <span class="nav-logo-text">
               <span class="nav-logo-azeka">AZEKA</span>
               <span class="nav-logo-consulting">CONSULTING</span>

@@ -5,8 +5,7 @@
    Cyan IA #00D4FF | Violet IA #8C3DFF | Vert Afrique #39C27D | Or #F4C542
    ============================================= */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700&display=swap');
+/* --- Google Fonts : charge via <link> dans le HTML pour eviter le render-blocking --- */
 
 /* --- CSS Custom Properties --- */
 :root {
