@@ -57,10 +57,10 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 0.1 | Activer les skills `stitch-ui-design` et `stitch-loop` (`manage-claude-skills.sh add stitch-ui-design stitch-loop`) | `~/.claude/skills/` | `[ ]` |
-| 0.2 | Creer un projet Stitch pour Azeka Consulting (via MCP `create_project`) et sauvegarder les metadonnees dans `.stitch/metadata.json` | `.stitch/metadata.json` | `[ ]` |
-| 0.3 | Generer `.stitch/DESIGN.md` encodant le design system Azeka : palette V2 (Bleu Nuit #0A1E3F, Cyan #00D4FF, Violet #8C3DFF, Vert #39C27D), fonts (Montserrat/Sora), glassmorphism, dark mode, border-radius, spacing | `.stitch/DESIGN.md` | `[ ]` |
-| 0.4 | Creer `.stitch/SITE.md` avec la vision du site, le sitemap existant et le roadmap des pages a generer | `.stitch/SITE.md` | `[ ]` |
+| 0.1 | Activer les skills `stitch-ui-design` et `stitch-loop` (`manage-claude-skills.sh add stitch-ui-design stitch-loop`) | `~/.claude/skills/` | `[x]` |
+| 0.2 | Creer un projet Stitch pour Azeka Consulting (via MCP `create_project`) et sauvegarder les metadonnees dans `.stitch/metadata.json` | `.stitch/metadata.json` | `[x]` |
+| 0.3 | Generer `.stitch/DESIGN.md` encodant le design system Azeka : palette V2 (Bleu Nuit #0A1E3F, Cyan #00D4FF, Violet #8C3DFF, Vert #39C27D), fonts (Montserrat/Sora), glassmorphism, dark mode, border-radius, spacing | `.stitch/DESIGN.md` | `[x]` |
+| 0.4 | Creer `.stitch/SITE.md` avec la vision du site, le sitemap existant et le roadmap des pages a generer | `.stitch/SITE.md` | `[x]` |
 
 ---
 
@@ -68,7 +68,7 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 
 | Phase | Intitule | Taches | dont Stitch | Terminees | Progression |
 |-------|----------|--------|-------------|-----------|-------------|
-| 0 | Prerequis Stitch | 4 | 4 | 0 | ░░░░░░░░░░ 0% |
+| 0 | Prerequis Stitch | 4 | 4 | 4 | ██████████ 100% |
 | 1 | Urgences | 11 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 2 | SEO & Metadonnees | 9 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 3 | Securite & Performance | 8 | 0 | 0 | ░░░░░░░░░░ 0% |
@@ -76,7 +76,7 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | 5 | Accessibilite | 6 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **0** | **░░░░░░░░░░ 0%** |
+| **Total** | | **63** | **15** | **4** | **█░░░░░░░░░ 6%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
