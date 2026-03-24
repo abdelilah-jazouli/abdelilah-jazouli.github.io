@@ -1,8 +1,22 @@
 [
   {
+    "slug": "moderniser-data-stack-2026",
+    "title": "Moderniser son Data Stack en 2026 : du Lakehouse au Real-Time",
+    "description": "Guide pratique pour migrer vers une architecture data moderne : technologies, patterns et stratégie de migration du Lakehouse au temps réel.",
+    "date": "2026-02-23",
+    "tags": [
+      "Data Engineering",
+      "Cloud",
+      "Lakehouse",
+      "Architecture"
+    ],
+    "readTime": "10 min",
+    "author": "Azeka Consulting"
+  },
+  {
     "slug": "rag-production-bonnes-pratiques",
     "title": "RAG en production : les pièges à éviter et les bonnes pratiques",
-    "description": "",
+    "description": "Retour d'expérience sur le déploiement de systèmes RAG en entreprise : chunking, embeddings, reranking et les erreurs courantes à éviter.",
     "date": "2025-02-10",
     "tags": [
       "GenAI",
@@ -11,34 +25,6 @@
       "REX"
     ],
     "readTime": "8 min",
-    "author": "Azeka Consulting"
-  },
-  {
-    "slug": "architecture-multi-agent-comparatif",
-    "title": "Architecture Multi-Agent : LangGraph vs CrewAI vs Autogen",
-    "description": "",
-    "date": "2025-01-28",
-    "tags": [
-      "Architecture",
-      "Multi-Agent",
-      "LLM",
-      "GenAI"
-    ],
-    "readTime": "12 min",
-    "author": "Azeka Consulting"
-  },
-  {
-    "slug": "moderniser-data-stack-2025",
-    "title": "Moderniser son Data Stack en 2025 : du Lakehouse au Real-Time",
-    "description": "",
-    "date": "2025-01-15",
-    "tags": [
-      "Data Engineering",
-      "Cloud",
-      "Lakehouse",
-      "Architecture"
-    ],
-    "readTime": "10 min",
     "author": "Azeka Consulting"
   }
 ]

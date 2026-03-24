@@ -1,5 +1,6 @@
 ---
 title: "Moderniser son Data Stack en 2026 : du Lakehouse au Real-Time"
+description: "Guide pratique pour migrer vers une architecture data moderne : technologies, patterns et stratégie de migration du Lakehouse au temps réel."
 date: 2026-02-23
 tags: [Data Engineering, Cloud, Lakehouse, Architecture]
 readTime: 10 min

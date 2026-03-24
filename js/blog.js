@@ -319,8 +319,16 @@ async function initArticleReader() {
 
         // Update page meta
         document.title = `${post.title} — Azeka Consulting`;
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) metaDesc.content = post.description;
+        const articleUrl = `https://www.azeka-consulting.com/article.html?slug=${slug}`;
+        const setMeta = (id, value) => { const el = document.getElementById(id); if (el) el.content = value; };
+        const setHref = (id, value) => { const el = document.getElementById(id); if (el) el.href = value; };
+        setMeta('metaDescription', post.description);
+        setMeta('ogTitle', `${post.title} — Azeka Consulting`);
+        setMeta('ogDescription', post.description);
+        setMeta('ogUrl', articleUrl);
+        setMeta('twTitle', `${post.title} — Azeka Consulting`);
+        setMeta('twDescription', post.description);
+        setHref('canonicalLink', articleUrl);
 
         // Render header
         renderArticleHeader(post);
