@@ -71,12 +71,12 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | 0 | Prerequis Stitch | 4 | 4 | 4 | ██████████ 100% |
 | 1 | Urgences | 11 | 3 | 11 | ██████████ 100% |
 | 2 | SEO & Metadonnees | 9 | 0 | 9 | ██████████ 100% |
-| 3 | Securite & Performance | 8 | 0 | 0 | ░░░░░░░░░░ 0% |
+| 3 | Securite & Performance | 8 | 0 | 8 | ██████████ 100% |
 | 4 | Design & Credibilite | 10 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 5 | Accessibilite | 6 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **24** | **████░░░░░░ 38%** |
+| **Total** | | **63** | **15** | **32** | **█████░░░░░ 51%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
@@ -172,24 +172,24 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 3.1 | Ajouter les attributs `integrity` et `crossorigin="anonymous"` sur les 3 scripts CDN (marked.js, highlight.js, marked-highlight) | `article.html` | `[ ]` |
-| 3.2 | Ajouter `rel="noopener noreferrer"` sur tous les liens `target="_blank"` du footer (3 pages) | `index.html`, `blog.html`, `article.html` | `[ ]` |
+| 3.1 | Ajouter les attributs `integrity` et `crossorigin="anonymous"` sur les 3 scripts CDN (marked.js, highlight.js, marked-highlight) | `article.html` | `[x]` |
+| 3.2 | Ajouter `rel="noopener noreferrer"` sur tous les liens `target="_blank"` du footer (3 pages) | `index.html`, `blog.html`, `article.html` | `[x]` |
 
 ### 4.2 Performance chargement
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 3.3 | Remplacer `@import url(...)` Google Fonts dans CSS par `<link rel="preconnect">` + `<link rel="stylesheet">` dans le `<head>` HTML | `css/styles.css`, `index.html`, `blog.html`, `article.html` | `[ ]` |
-| 3.4 | Ajouter `font-display: swap` dans l'URL Google Fonts | `index.html`, `blog.html`, `article.html` | `[ ]` |
-| 3.5 | Deplacer le `<link>` CSS Google Calendar du `<body>` vers le `<head>` | `index.html` | `[ ]` |
-| 3.6 | Ajouter `loading="lazy"` sur les images non-critiques et `fetchpriority="high"` sur la banniere hero | `index.html` | `[ ]` |
+| 3.3 | Remplacer `@import url(...)` Google Fonts dans CSS par `<link rel="preconnect">` + `<link rel="stylesheet">` dans le `<head>` HTML | `css/styles.css`, `index.html`, `blog.html`, `article.html` | `[x]` |
+| 3.4 | Ajouter `font-display: swap` dans l'URL Google Fonts | `index.html`, `blog.html`, `article.html` | `[x]` |
+| 3.5 | Deplacer le `<link>` CSS Google Calendar du `<body>` vers le `<head>` | `index.html` | `[x]` |
+| 3.6 | Ajouter `loading="lazy"` sur les images non-critiques et `fetchpriority="high"` sur la banniere hero | `index.html` | `[x]` |
 
 ### 4.3 Performance runtime
 
 | # | Tache | Fichier(s) | Statut |
 |---|-------|------------|--------|
-| 3.7 | Desactiver le canvas particules sur mobile via `matchMedia('(max-width: 768px)')` ou `matchMedia('(prefers-reduced-motion: reduce)')` | `js/main.js` | `[ ]` |
-| 3.8 | Convertir les images PNG en WebP avec fallback (banner-hero, logos) et ajouter `width`/`height` explicites sur chaque `<img>` | `images/`, `index.html`, `blog.html`, `article.html` | `[ ]` |
+| 3.7 | Desactiver le canvas particules sur mobile via `matchMedia('(max-width: 768px)')` ou `matchMedia('(prefers-reduced-motion: reduce)')` | `js/main.js` | `[x]` |
+| 3.8 | Convertir les images PNG en WebP avec fallback (banner-hero, logos) et ajouter `width`/`height` explicites sur chaque `<img>` | `images/`, `index.html`, `blog.html`, `article.html` | `[x]` |
 
 ---
 
