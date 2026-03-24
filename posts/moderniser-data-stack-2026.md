@@ -1,6 +1,6 @@
 ---
-title: "Moderniser son Data Stack en 2025 : du Lakehouse au Real-Time"
-date: 2025-01-15
+title: "Moderniser son Data Stack en 2026 : du Lakehouse au Real-Time"
+date: 2026-02-23
 tags: [Data Engineering, Cloud, Lakehouse, Architecture]
 readTime: 10 min
 author: Azeka Consulting
@@ -21,6 +21,7 @@ Sources → ETL batch (Informatica/Talend) → Data Warehouse → BI (Business O
 ```
 
 **Limitations :**
+
 - Coût d'infrastructure astronomique
 - Scalabilité verticale uniquement
 - Cycle ETL de plusieurs heures
@@ -35,6 +36,7 @@ Sources → Ingestion (Kafka/Nifi) → Data Lake (HDFS/S3) → Processing (Spark
 ```
 
 **Limitations :**
+
 - Le fameux **Data Swamp** (lac de données devenu marécage)
 - Pas de gouvernance native
 - Performances de requêtes médiocres
@@ -49,6 +51,7 @@ Sources → Ingestion (Kafka/Fivetran) → Lakehouse (Iceberg + Spark/Trino) →
 ```
 
 **Avantages :**
+
 - **ACID transactions** sur le data lake
 - **Schema evolution** sans migration
 - **Time travel** (requêtes sur l'historique)
@@ -205,24 +208,28 @@ events.writeStream \
 Ne tentez **jamais** un big-bang. Voici notre approche en 4 phases :
 
 ### Phase 1 : Foundation (1-2 mois)
+
 - Mettre en place le **stockage cloud** (GCS/S3)
 - Configurer **Terraform** pour l'IaC
 - Premiers pipelines d'ingestion batch
 - Pattern Medallion sur 2-3 sources critiques
 
 ### Phase 2 : Analytics (2-3 mois)
+
 - Déployer **dbt** pour les transformations
 - Tests de qualité de données automatisés
 - Migration progressive de la BI existante
 - Data catalog et documentation
 
 ### Phase 3 : Streaming (2-4 mois)
+
 - Mise en place de **Kafka/Pub-Sub**
 - Premiers use cases temps réel
 - Architecture **Lambda** (batch + streaming en parallèle)
 - Monitoring et alerting
 
 ### Phase 4 : IA & Advanced Analytics (ongoing)
+
 - Feature stores pour le ML
 - Embeddings et vector stores pour le RAG
 - Intégration avec les agents IA

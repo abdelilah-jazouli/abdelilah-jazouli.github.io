@@ -62,6 +62,7 @@ chunks = splitter.split_text(document)
 ```
 
 **Règles d'or :**
+
 - Un chunk = **une idée cohérente** (règle, procédure, définition)
 - Préserver les **métadonnées** (titre de section, page, source)
 - Tester avec de **vraies requêtes utilisateur**, pas des requêtes synthétiques
