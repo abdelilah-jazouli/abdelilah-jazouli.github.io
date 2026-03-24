@@ -72,11 +72,11 @@ Les taches concernees sont marquees avec les badges : `🎨 ui-design` et/ou `�
 | 1 | Urgences | 11 | 3 | 11 | ██████████ 100% |
 | 2 | SEO & Metadonnees | 9 | 0 | 9 | ██████████ 100% |
 | 3 | Securite & Performance | 8 | 0 | 8 | ██████████ 100% |
-| 4 | Design & Credibilite | 10 | 3 | 0 | ░░░░░░░░░░ 0% |
+| 4 | Design & Credibilite | 10 | 3 | 6 | ██████░░░░ 60% |
 | 5 | Accessibilite | 6 | 0 | 0 | ░░░░░░░░░░ 0% |
 | 6 | UX & Navigation | 8 | 3 | 0 | ░░░░░░░░░░ 0% |
 | 7 | Evolutions futures | 7 | 2 | 0 | ░░░░░░░░░░ 0% |
-| **Total** | | **63** | **15** | **32** | **█████░░░░░ 51%** |
+| **Total** | | **63** | **15** | **38** | **██████░░░░ 60%** |
 
 **Legende des indicateurs** :
 - `[ ]` A faire
@@ -204,9 +204,9 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Stitch | Statut |
 |---|-------|------------|--------|--------|
-| 4.1 | `🎨` Prototyper via Stitch les sections Services et Technologies avec icones SVG (generer 2-3 variantes) | `.stitch/designs/` | `ui-design` | `[ ]` |
-| 4.2 | Implementer la variante retenue : remplacer les emojis par des icones SVG dans Services, Technologies et Contact | `index.html`, `css/styles.css` | — | `[ ]` |
-| 4.3 | Mettre a jour les emojis du blog engine (emojiMap dans `blog.js`) par des icones SVG correspondantes | `js/blog.js`, `css/blog.css` | — | `[ ]` |
+| 4.1 | `🎨` Prototyper via Stitch les sections Services et Technologies avec icones SVG (generer 2-3 variantes) | `.stitch/designs/` | `ui-design` | `[x]` |
+| 4.2 | Implementer la variante retenue : remplacer les emojis par des icones SVG dans Services, Technologies et Contact | `index.html`, `css/styles.css` | — | `[x]` |
+| 4.3 | Mettre a jour les emojis du blog engine (emojiMap dans `blog.js`) par des icones SVG correspondantes | `js/blog.js`, `css/blog.css` | — | `[x]` |
 
 ### 5.2 Preuve sociale
 
@@ -214,7 +214,7 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Stitch | Statut |
 |---|-------|------------|--------|--------|
-| 4.4 | `🎨` Prototyper via Stitch une section temoignages clients (variantes : carrousel vs grille, avec/sans photo) | `.stitch/designs/` | `ui-design` | `[ ]` |
+| 4.4 | `🎨` Prototyper via Stitch une section temoignages clients (variantes : carrousel vs grille, avec/sans photo) | `.stitch/designs/` | `ui-design` | `[!]` |
 | 4.5 | Integrer les vrais logos SVG/PNG des references clients (Enedis, Thales, Orange, Bouygues Telecom, Sagemcom) dans le carrousel | `index.html`, `images/` | — | `[!]` |
 | 4.6 | Remplacer l'emoji avatar de la section Expertise par une photo professionnelle du fondateur | `index.html`, `images/` | — | `[!]` |
 | 4.7 | Implementer la section temoignages clients retenue (2-3 citations) | `index.html`, `css/styles.css` | — | `[!]` |
@@ -227,9 +227,9 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Stitch | Statut |
 |---|-------|------------|--------|--------|
-| 4.8 | `🎨` Prototyper via Stitch le bouton Google Calendar style Azeka (variantes de style CTA) | `.stitch/designs/` | `ui-design` | `[ ]` |
-| 4.9 | Implementer le style du bouton Google Calendar Appointment (gradient, font, glow) | `css/styles.css`, `index.html` | — | `[ ]` |
-| 4.10 | Synchroniser la charte documentee (`doc-charte-logo/charte_graphique_azeka_consulting.md`) avec la palette CSS reelle (V2) | `doc-charte-logo/charte_graphique_azeka_consulting.md` | — | `[ ]` |
+| 4.8 | `🎨` Prototyper via Stitch le bouton Google Calendar style Azeka (variantes de style CTA) | `.stitch/designs/` | `ui-design` | `[x]` |
+| 4.9 | Implementer le style du bouton Google Calendar Appointment (gradient, font, glow) | `css/styles.css`, `index.html` | — | `[x]` |
+| 4.10 | Synchroniser la charte documentee (`doc-charte-logo/charte_graphique_azeka_consulting.md`) avec la palette CSS reelle (V2) | `doc-charte-logo/charte_graphique_azeka_consulting.md` | — | `[x]` |
 
 ---
 

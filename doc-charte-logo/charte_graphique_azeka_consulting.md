@@ -61,30 +61,45 @@ La puissance technologique s’enracine en profondeur et s’élève vers l’in
 
 # 3. PALETTE OFFICIELLE
 
-## Bleu Nuit Institutionnel (fond principal)
+## Bleu Nuit Spatial (fond principal) — V2
 
-HEX : #0F1B2E
+HEX : #0A1E3F
 Usage : fonds majeurs, supports corporate, hero banner
 
-## Bleu Europe
+## Bleu IA Electrique — V2
 
-HEX : #174A9C
-Usage : feuillage nord, éléments IA, accents technologiques
+HEX : #1C5CFF
+Usage : circuits, effets lumineux, accents technologiques
+
+## Cyan IA — V2
+
+HEX : #00D4FF
+Usage : accents dynamiques, liens, hover states
+
+## Violet IA — V2
+
+HEX : #8C3DFF
+Usage : transition feuillage nord, accents secondaires
 
 ## Vert Afrique
 
-HEX : #39B77A
-Usage : racines sud, transitions, CTA
+HEX : #39C27D
+Usage : racines sud, CTA, succes
+
+## Or Lumiere — V2
+
+HEX : #F4C542
+Usage : halo energetique, highlights premium
 
 ## Blanc Institutionnel
 
 HEX : #F2F4F7
 Usage : typographie principale sur fond sombre
 
-## Dégradé Signature
+## Degradre Signature — V2
 
-Bleu Europe → Vert Afrique
-Usage strictement réservé aux éléments symboliques (arbre, lignes IA, accents premium)
+Cyan #00D4FF → Violet #8C3DFF → Vert #39C27D
+Usage : bandes decoratives, boutons CTA, texte gradient
 
 ---
 
