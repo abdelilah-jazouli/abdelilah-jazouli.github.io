@@ -112,6 +112,13 @@ img {
   display: block;
 }
 
+/* --- Image protection: disable drag and context menu --- */
+img.protected {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 /* --- Typography --- */
 h1,
 h2,
