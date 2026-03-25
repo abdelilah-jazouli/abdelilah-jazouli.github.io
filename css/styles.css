@@ -797,6 +797,77 @@ section {
   margin-bottom: 48px;
 }
 
+/* Grille IA : 3 + 2 centrees */
+.services-grid-ia {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.services-grid-ia .service-card-ia:nth-child(1),
+.services-grid-ia .service-card-ia:nth-child(2),
+.services-grid-ia .service-card-ia:nth-child(3) {
+  grid-column: span 2;
+}
+
+.services-grid-ia .service-card-ia:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.services-grid-ia .service-card-ia:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+.service-card-ia {
+  padding: 28px;
+  text-align: center;
+}
+
+.service-card-ia .card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 20px;
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+}
+
+.service-card-ia:nth-child(2) .card-icon {
+  background: var(--accent-blue-dim);
+  color: var(--accent-cyan);
+}
+
+.service-card-ia:nth-child(3) .card-icon {
+  background: var(--accent-violet-dim);
+  color: var(--accent-violet);
+}
+
+.service-card-ia:nth-child(4) .card-icon {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+}
+
+.service-card-ia:nth-child(5) .card-icon {
+  background: var(--accent-blue-dim);
+  color: var(--accent-blue);
+}
+
+.service-card-ia h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-card-ia p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
 .service-card {
   padding: 40px;
 }
@@ -2040,6 +2111,24 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .services-grid-ia {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-grid-ia .service-card-ia:nth-child(1),
+  .services-grid-ia .service-card-ia:nth-child(2),
+  .services-grid-ia .service-card-ia:nth-child(3),
+  .services-grid-ia .service-card-ia:nth-child(4),
+  .services-grid-ia .service-card-ia:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .services-grid-ia .service-card-ia:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
   .services-sub-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2123,6 +2212,14 @@ section {
   .hero-stats {
     justify-content: center;
     gap: 32px;
+  }
+
+  .services-grid-ia {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid-ia .service-card-ia:nth-child(5) {
+    max-width: 100%;
   }
 
   .services-sub-grid {
