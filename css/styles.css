@@ -1212,6 +1212,18 @@ section {
   letter-spacing: 0.3px;
 }
 
+.projects-note {
+  text-align: center;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
