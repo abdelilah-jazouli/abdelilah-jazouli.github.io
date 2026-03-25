@@ -214,10 +214,10 @@ Absence de mentions legales et de politique de confidentialite — obligation le
 
 | # | Tache | Fichier(s) | Stitch | Statut |
 |---|-------|------------|--------|--------|
-| 4.4 | `🎨` Prototyper via Stitch une section temoignages clients (variantes : carrousel vs grille, avec/sans photo) | `.stitch/designs/` | `ui-design` | `[x]` |
+| 4.4 | `🎨` Prototyper via Stitch une section temoignages clients (variantes : carrousel vs grille, avec/sans photo) | `.stitch/designs/` | `ui-design` | `[x]` (desactivee, prete a reactiver) |
 | 4.5 | Integrer les vrais logos SVG/PNG des references clients (Enedis, Thales, Orange, Bouygues Telecom, Sagemcom) dans le carrousel | `index.html`, `images/` | — | `[!]` |
 | 4.6 | Remplacer l'emoji avatar de la section Expertise par une photo professionnelle du fondateur | `index.html`, `images/` | — | `[x]` |
-| 4.7 | Implementer la section temoignages clients retenue (2-3 citations) | `index.html`, `css/styles.css` | — | `[x]` |
+| 4.7 | Implementer la section temoignages clients retenue (2-3 citations) | `index.html`, `css/styles.css` | — | `[x]` (desactivee, prete a reactiver) |
 
 > **Note** : les taches 4.5, 4.6 et 4.7 sont bloquees en attente d'assets (logos, photo, citations). Le prototypage Stitch (4.4) peut etre fait en amont avec du contenu placeholder pour valider le design.
 
