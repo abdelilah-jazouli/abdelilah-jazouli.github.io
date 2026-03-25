@@ -1286,6 +1286,111 @@ section {
 }
 
 /* =============================================
+   FLAGSHIP PROJECT SECTION
+   ============================================= */
+.flagship {
+  background: var(--bg-secondary);
+}
+
+.flagship-card {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.flagship-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, rgba(57, 194, 125, 0.15), rgba(57, 194, 125, 0.05));
+  border: 1px solid rgba(57, 194, 125, 0.3);
+  border-radius: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.flagship-content {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.flagship-title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.flagship-subtitle {
+  font-size: 1.05rem;
+  color: var(--accent-cyan);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.flagship-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.flagship-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.flagship-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.flagship-feature svg {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.flagship-stack h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.flagship-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .flagship-content {
+    padding: 32px 24px;
+  }
+
+  .flagship-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+}
+
+/* =============================================
    TESTIMONIALS SECTION
    ============================================= */
 .testimonials {
