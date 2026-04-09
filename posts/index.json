@@ -1,5 +1,21 @@
 [
   {
+    "slug": "pipeline-prospection-ia-optimisation-couts",
+    "title": "Pipeline de prospection IA multi-agents : -23% de coûts, +6% de qualité",
+    "description": "Retour d'expérience sur l'optimisation d'un pipeline de 5 agents IA pour la prospection B2B. De $1.76 à $1.36 par campagne en une journée d'expérimentation.",
+    "date": "2026-04-09",
+    "tags": [
+      "IA",
+      "LLM",
+      "Multi-Agents",
+      "DevOps",
+      "Optimisation",
+      "Prospection B2B"
+    ],
+    "readTime": "12 min",
+    "author": "Azeka Consulting"
+  },
+  {
     "slug": "moderniser-data-stack-2026",
     "title": "Moderniser son Data Stack en 2026 : du Lakehouse au Real-Time",
     "description": "Guide pratique pour migrer vers une architecture data moderne : technologies, patterns et stratégie de migration du Lakehouse au temps réel.",
